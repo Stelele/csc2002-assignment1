@@ -1,0 +1,29 @@
+
+*** These modified files were found in JOE when it aborted on Sat Feb 22 13:02:27 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+area
+
+*** File '(Unnamed)'
+key
+key
+
+*** File '(Unnamed)'
+Makefile
+src/LSArray.java
+ReadTextAsString.java
+src/LSArray.java
+Makefile
+src/LSArray.java
+src/LSArray.java
+.gitignore
+.empty
+.empty
+src/ReadTextAsString.java
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc

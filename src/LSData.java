@@ -1,32 +1,36 @@
-public class LSData 
+public class LSData<T>
 {
-    private String area;
-    private String regions;
+    private T area;
+    private T regions;
     
-    public LSData(String area, String regions)
+    public LSData(T area, T regions)
     {
         this.area = area;
         this.regions = regions;
     }
     
-    public String getArea()
+    public T getArea()
     {
         return area;
     }
     
-    public String getRegions()
+    public T getRegions()
     {
         return regions;
     }
     
-    public void setArea(String area)
+    public void setArea(T area)
     {
         this.area = area;
     }
     
-    public void setRegions(String regions)
+    public void setRegions(T regions)
     {
         this.regions = regions;
     }
     
+    public String toString()
+    {
+        return area.toString() + " " + regions.toString();
+    }
 }
