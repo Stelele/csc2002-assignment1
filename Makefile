@@ -6,6 +6,7 @@ JAVAC=/usr/bin/javac
 .SUFFIXES: .java .class
 SRCDIR=src
 BINDIR=bin
+OUTDIR=output
 
 $(BINDIR)/%.class:$(SRCDIR)/%.java
 	$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
@@ -17,4 +18,4 @@ default: $(CLASS_FILES)
 
 clean:
 	rm $(BINDIR)/*.class
-
+	rm $(OUTDIR)/*.txt
