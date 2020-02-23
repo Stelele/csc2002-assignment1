@@ -1,8 +1,7 @@
 public class LSArray
 {
     private LSData lsData[];
-    
-    
+        
     public LSArray(String srcFileLocation)
     {
         try
@@ -36,6 +35,7 @@ public class LSArray
             if(searchKey.equals(lsData[i].getArea()))
             {
                 System.out.println(lsData[i].getRegions());
+                foundArea = true;
                 break;
             }
         }

@@ -10,7 +10,7 @@ BINDIR=bin
 $(BINDIR)/%.class:$(SRCDIR)/%.java
 	$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
 	
-CLASSES=LSHelper.class LSData.class LSArray.class
+CLASSES=LSHelper.class LSData.class LSArray.class LSArrayApp.class
 CLASS_FILES=$(CLASSES:%.class=$(BINDIR)/%.class)
 
 default: $(CLASS_FILES)
