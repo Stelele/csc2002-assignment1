@@ -1,4 +1,4 @@
-public class LSData<T>
+public class LSData<T extends Comparable<T>>
 {
     private T area;
     private T regions;
@@ -32,5 +32,10 @@ public class LSData<T>
     public String toString()
     {
         return area.toString() + " " + regions.toString();
+    }
+    
+    public int compareTo(LSData<T> data)
+    {
+        return data.area.compareTo(area);
     }
 }

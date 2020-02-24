@@ -34,3 +34,98 @@ Finished processing /etc/joe/joerc
 *** File '(Unnamed)'
 area
 T
+
+*** These modified files were found in JOE when it aborted on Mon Feb 24 23:03:26 2020
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+area
+T
+
+*** File '(Unnamed)'
+key
+key
+String
+
+*** File '(Unnamed)'
+src/LSHelper.java
+src/LSHelper.java
+src/LSArray.java
+src/LSArray.java
+src/LSArray.java
+src/LSArray.java
+src/LSBSTree.java
+src/LSArray
+src/LSData.java
+src/LSData.java
+src/LSHelper.java
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc
+
+*** These modified files were found in JOE when it aborted on Mon Feb 24 23:36:21 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+area
+T
+
+*** File '(Unnamed)'
+key
+key
+String
+
+*** File '(Unnamed)'
+src/LSHelper.java
+src/LSHelper.java
+src/LSArray.java
+src/LSArray.java
+src/LSArray.java
+src/LSArray.java
+src/LSBSTree.java
+src/LSArray
+src/LSData.java
+src/LSData.java
+src/LSBSTreeNode.java
+src/LSBSTreeNode.java
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc
+
+*** These modified files were found in JOE when it aborted on Mon Feb 24 23:58:10 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+area
+T
+
+*** File '(Unnamed)'
+key
+key
+String
+
+*** File '(Unnamed)'
+src/LSArray.java
+src/LSBSTree.java
+src/LSBSTreeNode.java
+src/LSBSTreeNode.java
+src/LSBSTreeNode.java
+src/LSBSTreeNode.java
+src/LSBSTree.java
+src/LSBSTree.java
+src/LSData.java
+src/LSData.java
+src/LSBSTree.java
+src/LSBSTree.java
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc
