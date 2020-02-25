@@ -136,6 +136,56 @@ public class LSBSTree
             
         }
     }
+
+    public int getHeight()
+    {
+	return getHeight(root);
+    }
+
+    public int getHeight(LSBSTreeNode node)
+    {
+	if(node == null)
+	{
+		return -1;
+	}
+	else
+	{
+		return 1 + Math.max(getHeight(node.getLeft()), getHeight(node.getRight()));
+	}
+    }
+
+    public void printAreas(String stage, String day, String startTime)
+    {
+	String searchKey = stage + "_" + day + "_" + startTime;
+
+	printAreas(searchKey, root);
+    }
+
+    public void printAreas(String searchKey, LSBSTreeNode node)
+    {
+
+    	if(node == null)
+	{
+		System.out.println("Areas not found");
+	}
+	else
+	{	
+		int check = searchKey.compareTo((String)node.getData().getArea());
+		if(check == 0)
+		{
+			System.out.println(node.getData().getRegions());
+		}
+		else if(check < 0)
+		{
+			printAreas(searchKey, node.getLeft());
+		}
+		else
+		{
+			printAreas(searchKey, node.getRight());
+		}
+	}
+    }
+	
 }
 
 

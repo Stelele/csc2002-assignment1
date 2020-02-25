@@ -10,7 +10,7 @@ public class LSBSTreeNode
         left = null;
         right = null;
     }
-    
+
     public LSBSTreeNode getLeft()
     {
         return left;
@@ -39,5 +39,15 @@ public class LSBSTreeNode
     public int compareTo(LSBSTreeNode node)
     {
         return lsData.compareTo(node.lsData);
+    }
+
+    public LSData getData()
+    {
+	return lsData;
+    }
+
+    public void setData(LSData data)
+    {
+	lsData = data;
     }
 }

@@ -33,7 +33,7 @@ public class LSArray
         
         for(int i = 0; i < lsData.length; i++)
         {
-            comparisons++;
+            comparisons += 2;
             if(searchKey.equals(lsData[i].getArea()))
             {
                 System.out.println(lsData[i].getRegions());
