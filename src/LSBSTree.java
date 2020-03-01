@@ -154,22 +154,26 @@ public class LSBSTree
 	}
     }
 
-    public void printAreas(String stage, String day, String startTime)
+    public int printAreas(String stage, String day, String startTime)
     {
 	String searchKey = stage + "_" + day + "_" + startTime;
-
+	
+	comparisons = 0;
 	printAreas(searchKey, root);
+
+	return comparisons;
     }
 
     public void printAreas(String searchKey, LSBSTreeNode node)
     {
-
+ 	comparisons++;
     	if(node == null)
 	{
 		System.out.println("Areas not found");
 	}
 	else
 	{	
+		comparisons++;
 		int check = searchKey.compareTo((String)node.getData().getArea());
 		if(check == 0)
 		{
@@ -183,6 +187,23 @@ public class LSBSTree
 		{
 			printAreas(searchKey, node.getRight());
 		}
+	}
+    }
+
+    public int getSize()
+    {
+	return getSize(root);
+    }
+
+    public int getSize(LSBSTreeNode node)
+    {
+	if(node == null)
+    	{
+		return 0;
+	}
+	else
+	{
+		return 1 + getSize(node.getLeft()) + getSize(node.getRight()); 
 	}
     }
 	

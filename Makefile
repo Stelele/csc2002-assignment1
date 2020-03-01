@@ -11,7 +11,7 @@ OUTDIR=output
 $(BINDIR)/%.class:$(SRCDIR)/%.java
 	$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
 	
-CLASSES=LSHelper.class LSData.class LSArray.class LSArrayApp.class LSBSTreeNode.class LSBSTree.class LSBSTApp.class
+CLASSES=LSHelper.class LSData.class LSArray.class LSArrayApp.class LSBSTreeNode.class LSBSTree.class LSBSTApp.class LSTestPerformance.class
 CLASS_FILES=$(CLASSES:%.class=$(BINDIR)/%.class)
 
 default: $(CLASS_FILES)

@@ -25,7 +25,7 @@ public class LSArray
         }
     }
     
-    public void printAreas(String stage, String day, String startTime)
+    public int printAreas(String stage, String day, String startTime)
     {
         String searchKey = stage + "_" + day + "_" + startTime;
         boolean foundArea = false;
@@ -33,7 +33,7 @@ public class LSArray
         
         for(int i = 0; i < lsData.length; i++)
         {
-            comparisons += 2;
+            comparisons++;
             if(searchKey.equals(lsData[i].getArea()))
             {
                 System.out.println(lsData[i].getRegions());
@@ -45,16 +45,8 @@ public class LSArray
         comparisons++;
         if (!foundArea)
             System.out.println("Areas not found");
-            
-        try
-        {    
-            LSHelper.writeToFile("../output/LSArray_printAreas_Comparisons.txt",Integer.toString(comparisons));
-        }
-        catch(Exception e)
-        {
-            System.err.println("Could not write number of comparisons to file");
-        } 
-       
+    
+	return comparisons;	
     }
     
     public void printAllAreas()

@@ -8,7 +8,8 @@ public class LSArrayApp
         
         if(args.length == 3)
         {
-            arrayData.printAreas(args[0], args[1], args[2]);
+        	int comparisons =    arrayData.printAreas(args[0], args[1], args[2]);
+		System.out.println("Carried out " + Integer.toString(comparisons) + " comparisons");
         }
         else if(args.length == 0)
         {

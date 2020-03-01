@@ -8,11 +8,14 @@ public class LSBSTApp
 
 	if(args.length == 3)
         {
-            tree.printAreas(args[0], args[1], args[2]);
+		int comparisons = tree.printAreas(args[0], args[1], args[2]);
+		System.out.println("Carried out " + Integer.toString(comparisons) + " comparisons");
         }
         else if(args.length == 0)
         {
-            tree.inOrder();
+	    System.out.println("The height is " + Integer.toString(tree.getHeight()));
+	    System.out.println("The size is " + Integer.toString(tree.getSize()));
+            tree.preOrder();
         }
         else
         {
