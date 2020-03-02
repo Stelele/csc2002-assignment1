@@ -2,11 +2,12 @@ public class LSBSTree
 {
     private LSBSTreeNode root;
     private int comparisons;
-    
+    private int insertionComparisons;
+
     public LSBSTree(String fileName)
     {
         comparisons = 0;
-        
+        insertionComparisons = 0;     
         try
         {        
             String data[] = LSHelper.readFileAsString(fileName).split("\n");
@@ -26,9 +27,15 @@ public class LSBSTree
             root = null;
         }        
     }
-    
+   
+    public int getInsertionComparisons()
+    {
+	return insertionComparisons;
+    }
+
     public void add(LSBSTreeNode node)
     {
+	insertionComparisons++;
         if(root == null)
         {
             root = node;
@@ -41,6 +48,7 @@ public class LSBSTree
     
     public void add(LSBSTreeNode node,LSBSTreeNode root)
     {
+	insertionComparisons++;
         if(root.compareTo(node) <= 0)
         {
             if(root.getLeft() == null)
@@ -205,6 +213,11 @@ public class LSBSTree
 	{
 		return 1 + getSize(node.getLeft()) + getSize(node.getRight()); 
 	}
+    }
+
+    public void printAllAreas()
+    {
+	inOrder();
     }
 	
 }

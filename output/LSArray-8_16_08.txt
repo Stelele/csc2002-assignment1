@@ -1,2 +1,0 @@
-8, 16, 4, 12, 5, 13, 1, 9
-Carried out 2872 comparisons

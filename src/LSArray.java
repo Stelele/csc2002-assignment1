@@ -2,10 +2,13 @@ public class LSArray
 {
     private LSData lsData[];
     private int comparisons;
-        
+    private int insertionComparisons;
+
     public LSArray(String srcFileLocation)
     {
         comparisons = 0;
+	insertionComparisons = 0;
+
         try
         {
             String fileData[] = LSHelper.readFileAsString(srcFileLocation).split("\n");
@@ -15,7 +18,7 @@ public class LSArray
             for(int i = 0; i < fileData.length; i++)
             {
                 String entryDetails[] = fileData[i].split(" ",2);
-                
+				
                 lsData[i] = new LSData<String>(entryDetails[0], entryDetails[1]);
             }
         }
@@ -23,6 +26,16 @@ public class LSArray
         {
             lsData = null;
         }
+    }
+    
+    public int getSize()
+    {
+	return lsData.length;
+    }
+
+    public int getInsertionComparisons()
+    {
+	return insertionComparisons;
     }
     
     public int printAreas(String stage, String day, String startTime)

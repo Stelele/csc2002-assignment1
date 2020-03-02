@@ -1,0 +1,4 @@
+11, 3, 7, 15, 16, 8, 12
+Carried out 10 comparisons
+Carried out 42485 total insertion comparisons
+Total size is 2970
