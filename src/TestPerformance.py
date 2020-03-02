@@ -4,7 +4,7 @@ import random as r
 def main():
     fileLocation = "../input/Load_Shedding_All_Areas_Schedule_and_Map.clean.final.txt"
     pathDir = "/home/gift/Documents/CSC2001F/Assignment1/input"
-    testPerformanceStatistics = "../output/TestPerformance.txt"
+    testPerformanceStatistics = "../output/TestPerformance.csv"
 
     data = [line.strip() for line in open(fileLocation,'r')]
 
@@ -42,9 +42,6 @@ def main():
 
                 dataComparisons[app].append(comparisons)
                 dataInsertions[app].append(insertions)
-            
-            if index > 10:
-                break
 
         binTreeComparisonStatistics['best'].append(min(dataComparisons['LSBSTApp']))
         binTreeComparisonStatistics['worst'].append(max(dataComparisons['LSBSTApp']))
@@ -58,6 +55,17 @@ def main():
         arrayComparisonStatistics['worst'].append(max(dataComparisons['LSArrayApp']))
         arrayComparisonStatistics['average'].append(sum(dataComparisons['LSArrayApp'])//len(dataComparisons['LSArrayApp']))
 
-    print(subDataSetSize)
+    with open(testPerformanceStatistics,'w') as f:
+        f.write(',' + ','.join(map(str,subDataSetSize)) + '\n')
+        f.write('Bin Comp Best,' + ','.join(map(str,binTreeComparisonStatistics['best'])) + '\n')
+        f.write('Bin Comp Worst,' + ','.join(map(str,binTreeComparisonStatistics['worst'])) + '\n')
+        f.write('Bin Comp Average,' + ','.join(map(str,binTreeComparisonStatistics['average'])) +'\n')
+        f.write('Bin Insert Best,' + ','.join(map(str,binTreeInsertionStatistics['best'])) + '\n')
+        f.write('Bin Insert Worst,' + ','.join(map(str,binTreeInsertionStatistics['worst'])) + '\n')
+        f.write('Bin Insert Average,' + ','.join(map(str,binTreeInsertionStatistics['average'])) + '\n')
+        f.write('Arr Comp Best,' + ','.join(map(str,arrayComparisonStatistics['best'])) + '\n')
+        f.write('Arr Comp Worst,' + ','.join(map(str,arrayComparisonStatistics['worst'])) + '\n')
+        f.write('Arr Comp Average,' + ','.join(map(str,arrayComparisonStatistics['average'])) + '\n')
+
 if __name__ == "__main__":
     main()
