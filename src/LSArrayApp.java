@@ -1,5 +1,11 @@
+/**
+ *The runner class that runs the program with an array datastructure
+ * */
 public class LSArrayApp
 {
+    /**
+     *@param args takes at most 4 arguments in the format of 'stage day time fileLocation'. Note fileLocation is optional and no arguments can also be given
+     * */
     public static void main(String[] args)
     {
 	

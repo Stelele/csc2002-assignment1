@@ -1,5 +1,11 @@
+/**
+ *Runner class that uses Binary Search Tree Data Stracture
+ * */
 public class LSBSTApp
 {
+    /**
+     *@param args accepts at most 4 arguments in the for of 'stage day time fileLocation'. Note fileLocation can be null and no arguments may be provided to print everything
+     * */
     public static void main(String[] args)
     {
        
