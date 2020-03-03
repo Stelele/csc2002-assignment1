@@ -18,4 +18,3 @@ default: $(CLASS_FILES)
 
 clean:
 	rm $(BINDIR)/*.class
-	rm $(OUTDIR)/*.txt
