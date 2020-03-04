@@ -3,10 +3,12 @@
 # 22 February 2020
 
 JAVAC=/usr/bin/javac
+JAVADOC=/usr/bin/javadoc
 .SUFFIXES: .java .class
 SRCDIR=src
 BINDIR=bin
 OUTDIR=output
+DOC=doc
 
 $(BINDIR)/%.class:$(SRCDIR)/%.java
 	$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
@@ -18,3 +20,6 @@ default: $(CLASS_FILES)
 
 clean:
 	rm $(BINDIR)/*.class
+
+doc:
+	$(JAVADOC) -d $(DOC)/ $(SRCDIR)/*.java

@@ -2,6 +2,7 @@ import os
 import random as r
 
 def main():
+    #folder locations
     fileLocation = "../input/Load_Shedding_All_Areas_Schedule_and_Map.clean.final.txt"
     pathDir = "/home/gift/Documents/CSC2001F/Assignment1/input"
     testPerformanceStatistics = "../output/TestPerformance.csv"
@@ -10,6 +11,7 @@ def main():
 
     dataSpaces = len(data) // 10
     
+    #final information for each dataset
     binTreeComparisonStatistics = {'best':[], 'worst':[],'average':[]}
     arrayComparisonStatistics = {'best':[], 'worst':[],'average':[]} 
     binTreeInsertionStatistics = {'best':[], 'worst':[],'average':[]} 
